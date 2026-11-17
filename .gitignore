@@ -1,0 +1,85 @@
+######## SECRETE (cel mai important) ########
+application-local.properties
+application-local.yml
+application-local.yaml
+application-secret*.properties
+application-secret*.yml
+application-dev.properties
+application-prod.properties
+.env
+.env.*
+*.env
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.crt
+credentials*.json
+service-account*.json
+azure-credentials*
+*.publishsettings
+
+######## MAVEN / BUILD ########
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+out/
+!**/src/main/**/build/
+!**/src/test/**/build/
+*.jar
+*.war
+*.class
+!.mvn/wrapper/maven-wrapper.jar
+
+######## INTELLIJ ########
+.idea/
+*.iws
+*.iml
+*.ipr
+
+######## DATAGRIP ########
+.idea/dataSources/
+.idea/dataSources.local.xml
+*.dbeaver*
+dataSources.xml
+
+######## STS / ECLIPSE ########
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+######## NETBEANS ########
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+######## VS CODE ########
+.vscode/
+
+######## LOGURI ########
+*.log
+logs/
+
+######## SISTEM DE OPERARE ########
+.DS_Store
+Thumbs.db
+desktop.ini
+
+######## FIȘIERE TEMPORARE ########
+*.tmp
+*.bak
+*.swp
+*~
