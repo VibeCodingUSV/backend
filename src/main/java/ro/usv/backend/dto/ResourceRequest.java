@@ -1,4 +1,5 @@
-package ro.usv.backend.dto;
+java
+        package ro.usv.backend.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -11,4 +12,6 @@ public record ResourceRequest(
         @NotNull Long resourceTypeId,
         @Size(max = 150) String location,
         @NotNull ResourceStatus status,
-        Boolean requiresApproval) {}
+        Boolean requiresApproval,
+        @Size(max = 500) String imageUrl,
+        @Size(max = 1000) String specs) {}
