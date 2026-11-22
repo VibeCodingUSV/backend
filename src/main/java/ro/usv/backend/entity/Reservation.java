@@ -1,3 +1,4 @@
+
 package ro.usv.backend.entity;
 
 import jakarta.persistence.Column;
@@ -38,6 +39,12 @@ public class Reservation {
     private LocalDateTime endTime;
 
     private String purpose;
+
+    @Column(name = "funded_project", nullable = false)
+    private boolean fundedProject;
+
+    @Column(name = "project_name")
+    private String projectName;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -104,6 +111,22 @@ public class Reservation {
 
     public void setPurpose(String purpose) {
         this.purpose = purpose;
+    }
+
+    public boolean isFundedProject() {
+        return fundedProject;
+    }
+
+    public void setFundedProject(boolean fundedProject) {
+        this.fundedProject = fundedProject;
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
     public ReservationStatus getStatus() {
