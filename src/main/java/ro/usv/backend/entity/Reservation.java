@@ -40,11 +40,16 @@ public class Reservation {
 
     private String purpose;
 
+    // Prioritate pentru proiecte finantate
     @Column(name = "funded_project", nullable = false)
     private boolean fundedProject;
 
     @Column(name = "project_name")
     private String projectName;
+
+    // Reminder automat prin e-mail
+    @Column(name = "reminder_sent", nullable = false)
+    private boolean reminderSent;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
@@ -111,6 +116,14 @@ public class Reservation {
 
     public void setPurpose(String purpose) {
         this.purpose = purpose;
+    }
+
+    public boolean isReminderSent() {
+        return reminderSent;
+    }
+
+    public void setReminderSent(boolean reminderSent) {
+        this.reminderSent = reminderSent;
     }
 
     public boolean isFundedProject() {
