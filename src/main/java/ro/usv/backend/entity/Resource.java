@@ -34,6 +34,11 @@ public class Resource {
 
     private String location;
 
+    @Column(name = "image_url")
+    private String imageUrl;
+
+    private String specs;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private ResourceStatus status = ResourceStatus.ACTIVE;
@@ -118,5 +123,21 @@ public class Resource {
 
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getSpecs() {
+        return specs;
+    }
+
+    public void setSpecs(String specs) {
+        this.specs = specs;
     }
 }
